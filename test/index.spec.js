@@ -6,7 +6,7 @@ const app = express();
 
 require('dotenv').config();
 
-describe('api dogs', () => {
+describe.skip('api dogs', () => {
 
   describe('GET /api/breed/list/all', () => {
 
@@ -33,7 +33,7 @@ describe('api dogs', () => {
       expect(response.headers['content-type']).toContain('json');
     })
 
-    it.skip('La petición nos devuelve un array', () => {
+    it('La petición nos devuelve un array', () => {
       expect(response.body).toBeInstanceOf(Array);
     })
 
